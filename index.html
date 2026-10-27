@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For My Sayang ♡</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 24px 14px;
+  font-family: Georgia, serif;
+  color: #704957;
+  background-color: #fff0f3;
+  background-image: radial-gradient(#e8b7c6 1px, transparent 1px);
+  background-size: 17px 17px;
+}
+
+.page {
+  max-width: 460px;
+  margin: auto;
+}
+
+.paper {
+  padding: 25px 20px;
+  margin-bottom: 20px;
+  background: #fffdf7;
+  border: 2px solid #f0d4d8;
+  border-radius: 5px;
+  box-shadow: 4px 5px 0 #edc5d0;
+  transform: rotate(-0.5deg);
+}
+
+.paper:nth-child(even) {
+  transform: rotate(0.5deg);
+}
+
+.tape {
+  display: inline-block;
+  padding: 7px 16px;
+  background: #f9d8df;
+  transform: rotate(-3deg);
+  font-size: 12px;
+}
+
+h1 {
+  color: #d96f91;
+  font-size: 35px;
+  line-height: 1.2;
+}
+
+h2 {
+  color: #c66d88;
+  font-size: 23px;
+}
+
+p {
+  line-height: 1.85;
+  font-size: 15px;
+}
+
+.center { text-align: center; }
+
+.sticker {
+  font-size: 35px;
+  margin: 8px;
+}
+
+button {
+  padding: 12px 17px;
+  border: 1px solid #df9daf;
+  border-radius: 20px;
+  background: #f5c9d6;
+  color: #774557;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:active { transform: scale(.97); }
+
+#letter {
+  display: none;
+  margin-top: 20px;
+  padding: 16px;
+  border: 1px dashed #d99bad;
+  background: #fff4f6;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 18px 0;
+}
+
+.time {
+  min-width: 62px;
+  padding: 12px 5px;
+  background: #ffe4eb;
+  border-radius: 12px;
+}
+
+.time strong {
+  display: block;
+  font-size: 22px;
+  color: #c75f83;
+}
+
+.time span { font-size: 11px; }
+
+.photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.photos figure {
+  margin: 0;
+  padding: 7px;
+  background: white;
+  border: 1px solid #eed6dc;
+  transform: rotate(-2deg);
+}
+
+.photos figure:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.photos img {
+  display: block;
+  width: 100%;
+  height: 145px;
+  object-fit: cover;
+  background: #ffe6ed;
+}
+
+figcaption {
+  padding: 8px 2px 3px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.small {
+  font-size: 12px;
+  color: #a67887;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+<main class="page">
+
+  <section class="paper center">
+    <span class="tape">a little gift for you ♡</span>
+    <div class="sticker">🎀 🧸 💌</div>
+    <p class="small">A SPECIAL DAY FOR MY FAVORITE PERSON</p>
+    <h1>Happy Birthday,<br>Sayang! ♡</h1>
+    <p>
+      Today is all about you.
+      Aku punya sesuatu yang spesial
+      buat kamu. Siap buka hadiahnya?
+    </p>
+    <div class="sticker">🎂 🌷 🎁</div>
+    <p class="small">made with love, just for you</p>
+  </section>
+
+  <section class="paper center">
+    <span class="tape">little countdown ⏳</span>
+    <h2>Our Special Day</h2>
+    <p id="countText">Menghitung waktu menuju hari spesialmu...</p>
+
+    <div class="countdown">
+      <div class="time">
+        <strong id="days">00</strong><span>HARI</span>
+      </div>
+      <div class="time">
+        <strong id="hours">00</strong><span>JAM</span>
+      </div>
+      <div class="time">
+        <strong id="minutes">00</strong><span>MENIT</span>
+      </div>
+      <div class="time">
+        <strong id="seconds">00</strong><span>DETIK</span>
+      </div>
+    </div>
+    <p class="small">Every day is special because you exist ♡</p>
+  </section>
+
+  <section class="paper center">
+    <span class="tape">open when you're ready 💌</span>
+    <h2>A Letter for You</h2>
+    <div class="sticker">💗 ✉️ 💗</div>
+    <p>Ada surat kecil yang aku siapin khusus buat kamu...</p>
+
+    <button id="openBtn" onclick="openLetter()">
+      Open your letter ♡
+    </button>
+
+    <div id="letter">
+      <h2>Dear, Sayang ♡</h2>
+      <p>
+        Happy birthday, sayangku! 🥹💗
+        <br><br>
+        Selamat bertambah usia, yaa.
+        Semoga kamu selalu diberi kesehatan,
+        kebahagiaan, dan kemudahan dalam
+        setiap langkah yang kamu ambil.
+        <br><br>
+        Terima kasih sudah menjadi bagian
+        dari hari-hariku. Aku harap kamu
+        selalu punya alasan untuk tersenyum,
+        selalu dikelilingi orang-orang baik,
+        dan perlahan bisa mewujudkan semua
+        impian yang kamu punya.
+        <br><br>
+        Semoga di usia yang baru ini ada
+        banyak hal indah yang menunggumu.
+        Jangan terlalu keras sama diri sendiri,
+        ya. Kamu juga pantas beristirahat
+        dan menikmati hal-hal sederhana.
+        <br><br>
+        Aku berharap kita bisa terus berbagi
+        cerita, tertawa bersama, dan membuat
+        banyak kenangan manis.
+        <br><br>
+        Once again, happy birthday, my favorite
+        person. I'm rooting for you, always. ♡
+      </p>
+      <div class="sticker">🌷 🧸 💗</div>
+      <p>With love, your favorite person ♡</p>
+    </div>
+  </section>
+
+  <section class="paper center">
+    <span class="tape">memories we keep 📸</span>
+    <h2>Our Little Memories</h2>
+    <p>Some moments deserve a place in our scrapbook.</p>
+
+    <div class="photos">
+      <figure>
+        <img src="photo1.jpg" alt="Kenangan pertama">
+        <figcaption>our little moment ♡</figcaption>
+      </figure>
+      <figure>
+        <img src="photo2.jpg" alt="Kenangan kedua">
+        <figcaption>one to remember 🌷</figcaption>
+      </figure>
+      <figure>
+        <img src="photo3.jpg" alt="Kenangan ketiga">
+        <figcaption>happy little days 🎀</figcaption>
+      </figure>
+      <figure>
+        <img src="photo4.jpg" alt="Kenangan keempat">
+        <figcaption>you & me 💗</figcaption>
+      </figure>
+    </div>
+    <p class="small">
+      Four little pictures, countless lovely memories.
+    </p>
+  </section>
+
+  <section class="paper center">
+    <span class="tape">a birthday melody 🎵</span>
+    <h2>A Song for You</h2>
+    <div class="sticker">🎧 🎶 🌸</div>
+    <p>
+      Putar lagu ini sambil membaca surat kecilmu.
+    </p>
+
+    <audio id="music" controls loop preload="none">
+      <source src="birthday-song.mp3" type="audio/mpeg">
+      Browser kamu belum mendukung pemutar audio.
+    </audio>
+
+    <p class="small">
+      Kalau musik belum tersedia, tambahkan file
+      birthday-song.mp3 ke repository kamu.
+    </p>
+  </section>
+
+  <footer>
+    made with ♡ just for you, sayang<br>
+    <span class="sticker">🎂 💌 🧸</span>
+  </footer>
+
+</main>
+
+<script>
+// GANTI TANGGAL INI DENGAN TANGGAL ULANG TAHUN SAYANG.
+// Format: TAHUN-BULAN-TANGGAL
+// Contoh: "2026-11-15"
+const birthday = "2026-12-31";
+
+function updateCountdown() {
+  const now = new Date();
+  const parts = birthday.split("-").map(Number);
+  let target = new Date(parts[0], parts[1] - 1, parts[2]);
+
+  // Jika tanggal tahun ini sudah lewat, hitung ke tahun berikutnya.
+  if (target < now &&
+      target.toDateString() !== now.toDateString()) {
+    target = new Date(parts[0] + 1, parts[1] - 1, parts[2]);
+  }
+
+  const diff = target - now;
+
+  if (diff <= 0) {
+    document.getElementById("countText").textContent =
+      "Happy Birthday, Sayang! Hari spesialmu tiba! 🎂";
+    ["days", "hours", "minutes", "seconds"].forEach(id => {
+      document.getElementById(id).textContent = "00";
+    });
+    return;
+  }
+
+  document.getElementById("countText").textContent =
+    "Counting down to your special day ♡";
+
+  document.getElementById("days").textContent =
+    Math.floor(diff / 86400000);
+  document.getElementById("hours").textContent =
+    Math.floor(diff / 3600000) % 24;
+  document.getElementById("minutes").textContent =
+    Math.floor(diff / 60000) % 60;
+  document.getElementById("seconds").textContent =
+    Math.floor(diff / 1000) % 60;
+}
+
+function openLetter() {
+  document.getElementById("letter").style.display = "block";
+  document.getElementById("openBtn").textContent =
+    "Your letter is open ♡";
+  document.getElementById("openBtn").disabled = true;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+</body>
+</html>
